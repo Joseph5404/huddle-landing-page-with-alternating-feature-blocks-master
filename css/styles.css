@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* font family */
+    --ff-head: 'Poppins',   sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    /* font weight */
+    --fw-light:  400;
+    --fw-medium: 600;
+    --fw-bold:   700;
+
+     /* background color */
+     --bg-pink:         hsl(322, 100%, 66%);
+     --bg-pale-cyan:    hsl(193, 100%, 96%);
+     --bg-dark-cyan:    hsl(192, 100%, 9%);
+     --bg-grayish-blue: hsl(208, 11%, 55%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 36px;
+    width: 484px;
+    font-family: var(--ff-head);
+}
+
+h2,h3{
+    font-family: var(--ff-head);
+    font-size: 20px;
+}
+
+p{
+    font-family: var(--ff-body);
+}
+
+.one{
+    background-image: url(/images/bg-hero-desktop.svg);
+    background-color: var(--bg-pale-cyan);
+    background-size: contain;
+    padding: 2rem;
+    
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.top img{
+    width: 10rem;
+}
+
+.top .btn{
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 10px 50px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.top .btn:hover{
+    color: grey;
+}
+
+.bottom{
+    display: flex;
+    padding-top: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.img.img{
+    width: 50%;
+}
+ div img{
+    width: 100%;
+}
+
+
+div.info{
+    padding-top: 5rem;
+    width: 50%;
+}
+
+div.info p{
+    width: 397px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.bottom button{
+    padding: 15px 50px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: hsl(322, 100%, 66%);
+    box-shadow: 1px 1px 5px hsl(208, 11%, 55%);
+}
+
+section.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    margin-bottom: 200px;
+    padding-top: 100px;
+}
+
+section.card article{
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    padding: 40px 40px 40px 100px;
+    width: 1150px;
+    box-shadow: 1px -1px 5px hsl(208, 11%, 55%);
+    border-radius: 8px
+}
+section.card article div.info, div.image{
+    width: 100%;
+}
+section.card article p{
+color: hsl(208, 11%, 55%);
+}
+
+
+.white-box h3{
+color: hsl(192, 100%, 9%);
+}
+
+.white-box {
+    background-color: white;
+    height: 150px;
+    width: 400px;
+    border-radius: 10px;
+    position: absolute;
+   left: 35%;
+   top: 290%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 4px 5px -2px rgba(0, 0, 0, 0.75);
+}
+
+footer{
+    background-color: hsl(192, 100%, 9%);
+    color: #fff;
+    padding: 30px 0;
+   
+        
+}
+
+.comtainer{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+  .icons li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the margin as needed */
+    vertical-align: top; /* This keeps the images and text aligned at the top */
+  }
+
+
+
+.footer-icon{
+    width: 10%;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+li{
+    margin-bottom: 10px;
+}
+.social-icons{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+
+.social-icons img:hover{
+    filter: invert(59%) sepia(60%) saturate(526%) hue-rotate(122deg) brightness(92%) contrast(85%);
+    cursor: pointer;
+}
+.attribution{
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 375px) {
+    /* Mobile styles */
+    .one {
+      background-image: url(/images/bg-hero-mobile.svg);
+    }
+  
+    section.card article {
+      flex-direction: column;
+      gap: 0;
+      padding: 40px;
+    }
+  
+    .white-box {
+      width: 250px;
+      left: 25%;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .social-icons {
+      width: 100%;
+    }
+  }
+  
+  
+  @media (min-width: 1440px) {
+    /* Desktop styles */
+    .one {
+      background-image: url(/images/bg-hero-desktop.svg);
+    }
+  
+    section.card article {
+      flex-direction: row;
+      gap: 130px;
+      padding: 40px 40px 40px 100px;
+    }
+  
+    .white-box {
+      width: 400px;
+      left: 33%;
+    }
+  
+    .row {
+      flex-direction: row;
+    }
+  
+    .social-icons {
+      width: 50%;
+    }
+  }
+  
